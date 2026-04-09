@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width",
+              initial-scale="1.0">
+        <title>Student Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form-container">
+          <h1>Student Registration Form</h1>
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <p>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </p>
+                <p>
+                   <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required> 
+                </p>
+                <p>
+                    <label>Gender:</label>
+                       <input type="radio" id="male" name="gender" value="male">
+                       <label for="male">Male</label>
+                       <input type="radio" id="female" name="gender" value="female">
+                       <label for="female">Female</label>
+                       <input type="radio" id="other" name="other" value="other">
+                       <label for="other">Other</label>
+                </p>
+                <p>
+                    <label for="profile-photo">Profile Photo:</label>
+                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <p>
+                    <label for="student-id">Student ID:</label>
+                    <input type="text" id="student-id" name="student-id" pattern="[A-Z]{2}[0-9]{6}" title="Two uppercase letters followed by six numbers" required>
+                </p>
+                <p>
+                    <label for="programme">Programme:</label>
+                    <select id="programme" name="programme">
+                        <option value="CS">CS</option>
+                        <option value="IT">IT</option>
+                        <option value="IS">IS</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="year-of-study">Year of Study:</label>
+                    <input type="number" id="year-of-study" name="year-of-study" min="1" max="5">
+                </p>
+                <p>
+                    <label>Specialization</label>
+                    <input type="checkbox" id="web" name="Specialization" value="web">
+                    <label for="web">Web</label><br>
+                    <input type="checkbox" id="security" name="specialization" value="security">
+                    <label for="security">Security</label><br>
+                    <input type="checkbox" id="ai" name="specialization" value="AI">
+                    <label for="ai">AI</label><br>
+                    
+
+                </p>
+            </fieldset>
+            <fieldset>
+                <p>
+                    <label for="bio">About yourself</label>
+                    <textarea id="bio" name="bio" rows="6" cols="50" required></textarea>
+                </p>
+                <div class="button-group">
+                    <button type="submit">Submit:</button>
+                    <button type="reset">Clear Form:</button>
+                </div>
+            </fieldset>
+         </form>
+       </div>   
+    </body>
+</html>
